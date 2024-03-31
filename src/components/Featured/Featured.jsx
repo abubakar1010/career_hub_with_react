@@ -7,7 +7,7 @@ const Featured = ({element}) => {
 
     const {salary,job_type,location,remote_or_onsite,company_name,logo,job_title,id} = element
 
-    console.log(logo);
+    // console.log(logo);
     return (
         <div className=" border border-[#E8E8E8] rounded-lg p-10 ">
             <img src={logo} alt="" />
