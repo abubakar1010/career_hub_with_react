@@ -1,10 +1,11 @@
 import { CiDollar } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 
 const Featured = ({element}) => {
 
-    const {salary,job_type,location,remote_or_onsite,company_name,logo,job_title} = element
+    const {salary,job_type,location,remote_or_onsite,company_name,logo,job_title,id} = element
 
     console.log(logo);
     return (
@@ -27,7 +28,9 @@ const Featured = ({element}) => {
                 <p className=" flex gap-3"><CiDollar className=" text-2xl" />Salary:{salary}</p>
             </div>
             <div className=" mt-7">
+            <NavLink to={`/jobDetail/${id}`}>
             <button type="button" className="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-6 py-3 text-center bg-gradient-to-r to-[#7E90FE]  from-[#9873FF]">View Details</button>
+            </NavLink>
             </div>
         </div>
     );
